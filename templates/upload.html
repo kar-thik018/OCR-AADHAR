@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image for OCR</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" class="file-input">
+            <button type="submit" class="button">Upload and Process</button>
+        </form>
+
+        {% if msg %}
+            <p class="message">{{ msg }}</p>
+        {% endif %}
+
+        {% if extracted_text %}
+            <h2>Extracted Text:</h2>
+            <p class="extracted-text">{{ extracted_text }}</p>
+            <p class="extracted-text">{{r1}}</p>
+        {% endif %}
+
+        {% if img_src %}
+            <h2>Uploaded Image:</h2>
+            <img src="{{ img_src }}" alt="Uploaded Image" class="uploaded-image">
+        {% endif %}
+    </div>
+</body>
+</html>

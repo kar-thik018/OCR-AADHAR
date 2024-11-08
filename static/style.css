@@ -1,0 +1,93 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #bae7f8, #a0b8f5); /* Soft pastel gradient */
+    /* Fallback color */
+    background-color: #a8e0f5;
+    color: #868383;
+    height: 100vh; /* Ensure the body covers the full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for text readability */
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #19c2ff; /* Soft coral color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #555; /* Dark gray for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #62b1f6; /* Soft blue button color */
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(98, 177, 246, 0.5);
+}
+
+.button:hover {
+    background-color: #4da3e2; /* Slightly darker blue on hover */
+    cursor: pointer;
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.button:active {
+    transform: translateY(1px); /* Slight push effect */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Smaller font size for mobile */
+    }
+
+    p {
+        font-size: 1.2rem; /* Smaller paragraph font size */
+    }
+
+    .button {
+        font-size: 1.2rem; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem; /* Even smaller for smaller screens */
+    }
+
+    p {
+        font-size: 1rem; /* Even smaller for smaller screens */
+    }
+
+    .button {
+        padding: 10px 20px; /* Smaller button padding */
+    }
+}
